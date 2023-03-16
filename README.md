@@ -25,4 +25,4 @@ Here, the first word after `::` is the category (`outline`, `solid` or `mini`), 
 
 ## License
 
-This package is open-sourced software licensed under the [MIT](LICENSE) license.
+This package is open-sourced software licensed under the [MIT](LICENSE.md) license.
