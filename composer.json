@@ -1,0 +1,28 @@
+{
+    "name": "osmianski/laravel-heroicons",
+    "description": "Heroicons as Laravel Blade components",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vlad Osmianski",
+            "email": "vlaosm@gmail.com",
+            "homepage": "https://osmianski.com/"
+        }
+    ],
+    "keywords": ["Laravel", "Blade", "Heroicons"],
+    "require": {
+        "illuminate/support": "~10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Osmianski\\Heroicons\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Osmianski\\Heroicons\\HeroiconServiceProvider"
+            ]
+        }
+    }
+}
