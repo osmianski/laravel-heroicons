@@ -1,6 +1,8 @@
 ## Heroicons for Laravel Blade
 
-Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS, available as Laravel Blade components. 
+Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS, available as Laravel Blade components: 
+
+![heroicons.com](docs/screen-capture.png)
 
 ## Installation
 
