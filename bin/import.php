@@ -16,11 +16,9 @@ class ImportCommand
     {
         global $argv;
 
-        $src = $argv[1];
-
-        $this->convertDir("{$src}/src/20/solid", "resources/views/components/mini", true);
-        $this->convertDir("{$src}/src/24/solid", "resources/views/components/solid", true);
-        $this->convertDir("{$src}/src/24/outline", "resources/views/components/outline", false);
+        $this->convertDir("{$argv[1]}/20/solid", "resources/views/components/mini", true);
+        $this->convertDir("{$argv[1]}/24/solid", "resources/views/components/solid", true);
+        $this->convertDir("{$argv[1]}/24/outline", "resources/views/components/outline", false);
     }
 
     protected function convertDir(string $src, string $dest, bool $solid): void
