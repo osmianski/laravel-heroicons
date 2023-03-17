@@ -16,7 +16,7 @@
     "url": "https://github.com/osmianski/laravel-heroicons/issues"
   },
   "homepage": "https://github.com/osmianski/laravel-heroicons",
-  "devDependencies": {
+  "dependencies": {
     "heroicons": "^2"
   }
 }
