@@ -16,7 +16,7 @@ composer require osmianski/laravel-heroicons
 
 Find an icon at [heroicons.com](https://heroicons.com) under Outline, Solid or Mini category and add it to your Laravel Blade template using the following syntax:
 
-```php
+```html
 <div class="text-gray-400 hover:text-gray-500">
     <x-heroicons::outline.bell class="h-6 w-6" />
     <x-heroicons::solid.user class="h-8 w-8" />
