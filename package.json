@@ -1,0 +1,22 @@
+{
+  "name": "laravel-heroicons",
+  "description": "Heroicons as Laravel Blade components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osmianski/laravel-heroicons.git"
+  },
+  "keywords": [
+    "Laravel",
+    "Blade",
+    "Heroicons"
+  ],
+  "author": "Vlad Osmianski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osmianski/laravel-heroicons/issues"
+  },
+  "homepage": "https://github.com/osmianski/laravel-heroicons",
+  "devDependencies": {
+    "heroicons": "^2"
+  }
+}

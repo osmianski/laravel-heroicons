@@ -1,0 +1,40 @@
+name: import
+on:
+  schedule:
+    - workflow_dispatch:
+    - cron: '0 0 * * *'
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Import Heroicons SVG images
+        run: |
+          npm update
+          php bin/import.php node_modules/heroicons
+
+      - name: Create pull request
+        id: cpr
+        uses: peter-evans/create-pull-request@v4
+        with:
+          token: ${{ secrets.HEROICONS_IMPORT_TOKEN }}
+
+      - name: Enable pull request auto-merge
+        if: steps.cpr.outputs.pull-request-operation == 'created'
+        uses: peter-evans/enable-pull-request-automerge@v2
+        with:
+          token: ${{ secrets.HEROICONS_IMPORT_TOKEN }}
+          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+          merge-method: squash
+
+      - name: Auto-approve
+        if: steps.cpr.outputs.pull-request-operation == 'created'
+        uses: juliangruber/approve-pull-request-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          number: ${{ steps.cpr.outputs.pull-request-number }}
