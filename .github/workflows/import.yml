@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Import Heroicons SVG images
         run: |
@@ -22,13 +20,13 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v4
         with:
-          token: ${{ secrets.HEROICONS_IMPORT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Enable pull request auto-merge
         if: steps.cpr.outputs.pull-request-operation == 'created'
         uses: peter-evans/enable-pull-request-automerge@v2
         with:
-          token: ${{ secrets.HEROICONS_IMPORT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
           merge-method: squash
 
