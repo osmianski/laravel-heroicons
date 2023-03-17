@@ -25,6 +25,10 @@ Find an icon at [heroicons.com](https://heroicons.com) under Outline, Solid or M
 
 Here, the first word after `::` is the category (`outline`, `solid` or `mini`), the second is the name of the icon.
 
+## Credits
+
+All the Heroicons are originally created by [@tailwindlabs](https://github.com/tailwindlabs). They are later wrapped into Laravel Blade components by [@osmianski](https://github.com/osmianski).
+   
 ## License
 
 This package is open-sourced software licensed under the [MIT](LICENSE.md) license.
