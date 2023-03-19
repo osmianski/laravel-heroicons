@@ -22,13 +22,14 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
 
-      - name: Enable pull request auto-merge
-        if: steps.cpr.outputs.pull-request-operation == 'created'
-        uses: peter-evans/enable-pull-request-automerge@v2
-        with:
-          token: ${{ secrets.PAT }}
-          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
-          merge-method: squash
+# There are no "status checks" configured, maybe this step is not needed at all?
+#      - name: Enable pull request auto-merge
+#        if: steps.cpr.outputs.pull-request-operation == 'created'
+#        uses: peter-evans/enable-pull-request-automerge@v2
+#        with:
+#          token: ${{ secrets.PAT }}
+#          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+#          merge-method: squash
 
       - name: Auto-approve
         if: steps.cpr.outputs.pull-request-operation == 'created'
