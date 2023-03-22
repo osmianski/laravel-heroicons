@@ -1,5 +1,7 @@
 ## Heroicons for Laravel Blade
 
+**Update**. I wish I knew this earlier. There is a [package](https://blade-ui-kit.com/blade-icons) that does that, and more. Having said that, this package is no longer maintained.
+
 Heroicons - beautiful hand-crafted SVG icons, by the makers of Tailwind CSS, available as Laravel Blade components: 
 
 ![heroicons.com](docs/screen-capture.png)
